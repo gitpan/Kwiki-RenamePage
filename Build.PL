@@ -7,6 +7,7 @@ my $builder = Module::Build->new(
     license             => 'perl',
     dist_author         => 'Dr Bean <drbean@cpan.org>',
     dist_version_from   => 'lib/Kwiki/RenamePage.pm',
+    requires		=> { Kwiki => 0.39 },
     build_requires => {
         'Test::More' => 0,
     },

@@ -13,7 +13,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -25,11 +25,46 @@ use Kwiki::Plugin '-Base';
 use mixin 'Kwiki::NewPage';
 use mixin 'Kwiki::Installer';
 
+=head1 class_id
+
+Unmodifiable Class id accessor
+
+=cut
+
 const class_id => 'rename_page';
+
+=head1 cgi_class
+
+Unmodifiable Class class accessor
+
+=cut
+
 const cgi_class => 'Kwiki::RenamePage::CGI';
+
+=head1 screen_template
+
+unmodifiable screen_template accessor
+
+=cut
+
 const screen_template =>  'rename_page_content.html';
+
+=head1 old_page_name
+
+Modifiable old_page_name accessor
+
+=cut
+
 field 'old_page_name';
+
+=head1 old_page_content
+
+Modifiable old_page_content accessor
+
+=cut
+
 field 'old_page_content';
+
 # field 'page_time';
 
 =head1 METHODS
